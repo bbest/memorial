@@ -13,8 +13,19 @@
 </head>
 <body>
 
+  <!-- top bar ---->
+  <nav class="topbar" aria-label="Page sections">
+    <div class="topbar-inner">
+      <a class="topbar-name" href="#top" id="topbar-name"></a>
+      <div class="topbar-links">
+        <a href="#photos">Photos</a>
+        <a class="topbar-cta" href="#guestbook">Sign the Guestbook</a>
+      </div>
+    </div>
+  </nav>
+
   <!-- hero ---->
-  <header class="hero">
+  <header class="hero" id="top">
     <figure class="hero-photo"><img id="hero-img" alt=""></figure>
     <div class="hero-text">
       <p class="kicker">In loving memory</p>
@@ -39,6 +50,10 @@
         <span class="link-title">Video</span>
         <span class="link-sub">Watch the memorial video</span>
       </a>
+      <a class="link-card link-internal" href="#guestbook">
+        <span class="link-title">Guestbook</span>
+        <span class="link-sub">Share a memory or a few words</span>
+      </a>
     </nav>
 
     <!-- photo viewer ---->
@@ -51,7 +66,7 @@
     </section>
 
     <!-- guestbook ---->
-    <section class="section" id="guestbook" aria-labelledby="gb-h">
+    <section class="section section-center" id="guestbook" aria-labelledby="gb-h">
       <h2 id="gb-h">Guestbook</h2>
       <p class="muted">Share a memory, a story, or a few words for the family.</p>
 

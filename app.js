@@ -3,7 +3,11 @@
   const $  = (id) => document.getElementById(id);
 
   // header and links ----
-  $("names").textContent    = M.names;
+  // break the heading after "&" so it doesn't wrap mid-name
+  M.names.split(/(?<=&)\s+/).forEach((part, i) => {
+    if (i) $("names").appendChild(document.createElement("br"));
+    $("names").append(part); });
+  $("topbar-name").textContent = M.names;
   $("dates").textContent    = M.dates;
   $("epigraph").textContent = M.epigraph;
   $("hero-img").src = M.hero.src;
