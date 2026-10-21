@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brooks &amp; Carolyn Otis</title>
+  <meta name="description" content="In memory of Brooks and Carolyn Otis: photos, video and a guestbook.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js"></script>
+</head>
+<body>
+
+  <!-- hero ---->
+  <header class="hero">
+    <figure class="hero-photo"><img id="hero-img" alt=""></figure>
+    <div class="hero-text">
+      <p class="kicker">In loving memory</p>
+      <h1 id="names"></h1>
+      <p class="dates" id="dates"></p>
+      <p class="epigraph" id="epigraph"></p>
+    </div>
+  </header>
+
+  <main>
+    <!-- links ---->
+    <nav class="links" aria-label="Photos and video">
+      <a class="link-card" id="link-historical" target="_blank" rel="noopener">
+        <span class="link-title">Historical Photos</span>
+        <span class="link-sub">The family album, through the years</span>
+      </a>
+      <a class="link-card" id="link-memorial" target="_blank" rel="noopener">
+        <span class="link-title">Memorial Photos</span>
+        <span class="link-sub">From the memorial celebration</span>
+      </a>
+      <a class="link-card" id="link-video" target="_blank" rel="noopener">
+        <span class="link-title">Video</span>
+        <span class="link-sub">Watch the memorial video</span>
+      </a>
+    </nav>
+
+    <!-- photo viewer ---->
+    <section class="section" id="photos" aria-labelledby="photos-h">
+      <div class="section-head">
+        <h2 id="photos-h">Through the Years</h2>
+        <button class="btn" id="play-all" type="button">▶ Play slideshow</button>
+      </div>
+      <ul class="grid" id="grid"></ul>
+    </section>
+
+    <!-- guestbook ---->
+    <section class="section" id="guestbook" aria-labelledby="gb-h">
+      <h2 id="gb-h">Guestbook</h2>
+      <p class="muted">Share a memory, a story, or a few words for the family.</p>
+
+      <form id="gb-form" class="gb-form">
+        <label>Your name
+          <input name="name" required maxlength="100" autocomplete="name">
+        </label>
+        <label>Your message
+          <textarea name="message" required rows="5" maxlength="4000"></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Sign the guestbook</button>
+        <p class="gb-status" id="gb-status" role="status"></p>
+      </form>
+
+      <ol class="gb-entries" id="gb-entries"></ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made with love by their family.</p>
+  </footer>
+
+  <!-- lightbox ---->
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <div class="lb-bar">
+      <span class="lb-count" id="lb-count"></span>
+      <div class="lb-tools">
+        <button class="lb-btn" id="lb-play" type="button" aria-label="Play slideshow">▶</button>
+        <button class="lb-btn" id="lb-close" type="button" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <figure class="lb-stage">
+      <img id="lb-img" alt="">
+      <figcaption id="lb-cap"></figcaption>
+    </figure>
+    <button class="lb-nav lb-prev" id="lb-prev" type="button" aria-label="Previous photo">‹</button>
+    <button class="lb-nav lb-next" id="lb-next" type="button" aria-label="Next photo">›</button>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
